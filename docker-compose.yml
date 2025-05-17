@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  finance-manager-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    container_name: finance-manager
+    volumes:
+      - ./:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
