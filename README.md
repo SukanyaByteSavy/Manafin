@@ -1,0 +1,2 @@
+# Manafin
+A finance manager 
